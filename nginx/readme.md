@@ -1,5 +1,10 @@
 # General
 
+## Install nginx:
+```
+sudo apt install nginx
+```
+
 ## Create basic nginx config for gunicorn: [ref](https://www.alibabacloud.com/blog/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04_594319)
 ```bash
 sudo nano /etc/nginx/sites-available/gunicorn
