@@ -2,7 +2,7 @@
 
 ## Install nginx:
 ```
-sudo apt install nginx
+sudo apt install nginx -y
 ```
 
 ## Create basic nginx config for gunicorn: [ref](https://www.alibabacloud.com/blog/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04_594319)
@@ -32,11 +32,11 @@ sudo ln -s /etc/nginx/sites-available/gunicorn /etc/nginx/sites-enabled/
 ```
 Next, test the Nginx for any configuration error with the following command:
 ```
-nginx -t
+sudo nginx -t
 ```
 Finally, restart Nginx by running the following command:
 ```
-systemctl restart nginx
+sudo systemctl restart nginx
 ```
 
 ## Allow all servers:
