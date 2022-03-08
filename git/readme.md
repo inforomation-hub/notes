@@ -9,3 +9,8 @@ git config --global credential.helper store
 ```
 git commit --amend -m "an updated commit message"
 ```
+
+## Clean-up outdated references:
+```bash
+git remote prune origin
+```
