@@ -14,3 +14,13 @@ git commit --amend -m "an updated commit message"
 ```bash
 git remote prune origin
 ```
+
+## Set / Update remote
+```
+git remote set-url <remote_name> <remote_url>
+```
+
+## Add remote
+```
+git remote add <remote_name> <remote_url>
+```
