@@ -44,5 +44,7 @@ sudo systemctl status NodeServer.service
 sudo journalctl -u NodeServer.service
 # -n <num of lines>
 sudo journalctl -u NodeServer.service -n 20
+# -f follow
+sudo journalctl -u NodeServer.service -n 20 -f
 ```
 
