@@ -37,6 +37,12 @@ sudo systemctl restart NodeServer.service
 ```
 ### to check status
 ```
-sudo systemctl NodeServer.service
+sudo systemctl status NodeServer.service
+```
+### get logs of a service
+```
+sudo journalctl -u NodeServer.service
+# -n <num of lines>
+sudo journalctl -u NodeServer.service -n 20
 ```
 
