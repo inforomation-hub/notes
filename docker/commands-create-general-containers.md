@@ -1,4 +1,4 @@
 ## redis container
 ```
-docker run -d --restart unless-stopped redis
+sudo docker run -d --name redis -p 6379:6379 --restart unless-stopped redis
 ```
