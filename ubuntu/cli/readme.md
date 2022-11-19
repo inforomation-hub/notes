@@ -47,3 +47,8 @@ command &> out
 ```
 screen -XS <session-id> quit
 ```
+
+## Check porcesses running on port
+```
+sudo lsof -i -P -n | grep LISTEN
+```
