@@ -12,6 +12,7 @@ git commit --amend -m "an updated commit message"
 
 ## Clean-up outdated references:
 ```bash
+git remote prune origin --dry-run 
 git remote prune origin
 ```
 
