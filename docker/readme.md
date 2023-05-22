@@ -6,6 +6,8 @@ docker image prune
 docker container prune
 docker network prune
 docker volume prune
+# to do all
+docker system prune
 ```
 
 ## Build image:
