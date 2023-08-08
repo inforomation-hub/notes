@@ -10,3 +10,8 @@ icacls.exe $path /GRANT:R "$($env:USERNAME):(R)"
 # Disable inheritance and remove inherited permissions
 icacls.exe $path /inheritance:r
 ```
+
+## copy a folder from host machine to remote using pem file
+```
+ scp -r -i pemfile.pem ./source ubuntu@<IP or domain>:/home/ubuntu/destination
+```
