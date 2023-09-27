@@ -60,3 +60,12 @@ location / {
                proxy_pass         https://localhost:3000;
        }
 ```
+
+## serve static or media files
+May need to fix permissions first: `sudo chown -R :www-data static_folder`
+```
+location /api/static {
+    alias /home/ubuntu/swag_kash_api/static;
+    try_files $uri =404;
+}
+```
