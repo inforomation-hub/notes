@@ -38,6 +38,10 @@ Finally, restart Nginx by running the following command:
 ```
 sudo systemctl restart nginx
 ```
+Or if you want no downtime, instead of restart use reload:
+```
+service nginx reload
+```
 
 ## Allow all servers:
 ```
