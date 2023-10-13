@@ -34,13 +34,10 @@ Next, test the Nginx for any configuration error with the following command:
 ```
 sudo nginx -t
 ```
-Finally, restart Nginx by running the following command:
+Finally, reload or restart Nginx by running the following command:
 ```
+sudo nginx -s reload  # if you want no downtime, instead of restart use reload
 sudo systemctl restart nginx
-```
-Or if you want no downtime, instead of restart use reload:
-```
-service nginx reload
 ```
 
 ## Allow all servers:
@@ -64,7 +61,14 @@ location / {
                proxy_pass         https://localhost:3000;
        }
 ```
-
+## Fix permissions before serving static files
+```
+sudo -u www-data stat static_folder  # to check if nginx have permissions serve this directory
+sudo gpasswd -a www-data $(whoami)
+sudo chown -R :www-data static_folder
+```
+useful links for this:
+https://stackoverflow.com/a/25776092
 ## serve static or media files
 May need to fix permissions first: `sudo chown -R :www-data static_folder`
 ```
