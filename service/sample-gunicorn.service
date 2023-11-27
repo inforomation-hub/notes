@@ -1,0 +1,17 @@
+# sudo nano /etc/systemd/system/gunicorn.service
+[Unit]
+Description=Gunicorn Server
+After=multi-user.target
+
+[Service]
+WorkingDirectory=/home/ubuntu/eitrade_import/backend
+ExecStart=./entrypoint.sh
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=gunicorn-server
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target
